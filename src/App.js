@@ -27,7 +27,7 @@ const searchLocation = (event) => {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Temperature in {data.name} feels like:</p>
+            {data.name !== undefined && <p>Temperature in {data.name} feels like:</p>}
           </div>
           <div className='temp'>
             {data.main ? <h1>{data.main.feels_like.toFixed()}C°</h1> : null}
